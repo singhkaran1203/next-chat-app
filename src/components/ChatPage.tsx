@@ -95,9 +95,9 @@ const ChatPage: React.FC = () => {
             <div
               className={`${
                 message.sender === "You"
-                  ? "bg-pink-700 text-white self-end"
-                  : "bg-gray-300"
-              } p-2 inline-block rounded-xl text-sm font-normal`}
+                  ? "bg-gradient-to-r from-[#7951F3] to-[#B04FEF] text-white self-end rounded-xl"
+                  : "bg-[#E7EFF6] rounded-full"
+              } p-2 inline-block text-sm font-normal`}
             >
               {message.content}
             </div>
@@ -122,7 +122,7 @@ const ChatPage: React.FC = () => {
             <FaMicrophone />
           </button>
           <button
-            className="bg-pink-700 text-white text-xl p-2 rounded-full outline-none hover:bg-blue-600"
+            className="bg-gradient-to-r from-[#7951F3] to-[#B04FEF] text-white text-xl p-2 rounded-full outline-none hover:bg-blue-600"
             onClick={handleSendMessage}
           >
             <IoIosSend />
