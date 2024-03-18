@@ -69,7 +69,7 @@ const ChatPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-full">
       <div className="bg-white shadow-md p-2 flex items-center justify-between">
         <div className="text-slate-500 text-2xl p-3">
           <FaRegUser />
