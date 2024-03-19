@@ -16,33 +16,33 @@ const ChatPage: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      content: "this is first message",
+      content: "Hey, how are you?",
       sender: "You",
     },
     {
       id: 2,
-      content: "this is second message",
-      sender: "",
+      content: "I'm doing great, thanks for asking!",
+      sender: "Friend",
     },
     {
       id: 3,
-      content: "this is third message",
+      content: "Have you seen the new movie that came out?",
       sender: "You",
     },
     {
       id: 4,
-      content: "this is fourth message",
-      sender: "",
+      content: "Yeah, I watched it yesterday. It was amazing!",
+      sender: "Friend",
     },
     {
       id: 5,
-      content: "this is fifth message",
+      content: "Let's plan to watch it together sometime.",
       sender: "You",
     },
     {
       id: 6,
-      content: "this is sixth message",
-      sender: "",
+      content: "Sure, that sounds like a plan!",
+      sender: "Friend",
     },
   ]);
   const [newMessage, setNewMessage] = useState<string>("");
@@ -71,9 +71,9 @@ const ChatPage: React.FC = () => {
   return (
     <div className="flex flex-col h-full">
       <div className="bg-white shadow-md p-2 flex items-center justify-between">
-        <div className="text-slate-500 text-2xl p-3">
-          <FaRegUser />
-        </div>
+      <div className="text-slate-500 text-2xl mx-3 my-1  h-12 w-12 flex items-center justify-center">
+        <img src={`/profile/pic1.jpg`} alt="" className="rounded-full h-full w-full object-cover"/>
+      </div>
         <div className="w-full flex-grow">
           <h1 className="font-bold text-md">Karan Singh</h1>
           <h3 className="text-xs text-gray-600">last seen 3 hours ago</h3>

@@ -4,6 +4,7 @@ import { CiMail } from "react-icons/ci";
 import { FaUserGroup } from "react-icons/fa6";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoIosAddCircle } from "react-icons/io";
+import { FaSearch } from "react-icons/fa";
 import UserCard from "./UserCard";
 
 const Sidebar = () => {
@@ -12,32 +13,37 @@ const Sidebar = () => {
       id: 1,
       name: "karan singh",
       active: true,
+      recentMessage:false
     },
     {
       id: 2,
       name: "kanak dwivedi",
       active: false,
+      recentMessage:true
     },
     {
       id: 3,
       name: "arya upadhyay",
       active: false,
+      recentMessage:true,
     },
     {
       id: 4,
       name: "himanshu",
       active: false,
+      recentMessage:false
     },
     {
       id: 5,
       name: "harsh raj",
       active: false,
+      recentMessage:false
     },
   ];
 
   return (
     <div className="bg-[#FAFBFD] h-full">
-      <div className="flex justify-between items-center p-5 text-2xl shadow-lg bg-white">
+      <div className="flex justify-between items-center p-5 text-2xl shadow-md bg-white">
         <div className="relative">
           <FiMessageSquare className="text-[#7951F3]" />
           <div className="text-xs text-white bg-[#D27179] absolute right-[-5px] top-[-5px] w-[15px] h-[15px] flex justify-center items-center rounded-full">
@@ -63,15 +69,18 @@ const Sidebar = () => {
         <h1>Groups</h1>
         <h1>Public</h1>
       </div>
-      <input
-        type="text"
-        placeholder="Search"
-        className="shadow-md min-w-max mx-6 outline-none rounded-3xl px-3 py-1 font-light"
-      />
+      <div className="relative mx-6 my-2">
+        <input
+          type="text"
+          placeholder="Search"
+          className="shadow-md min-w-max outline-none rounded-3xl px-3 py-1 pl-8 font-light"
+        />
+        <FaSearch className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" />
+      </div>
       <div>
         {users.map((user) => {
           return (
-            <UserCard key={user.id} name={user.name} active={user.active} />
+            <UserCard key={user.id} id={user.id} name={user.name} active={user.active} recentMessage={user.recentMessage } />
           );
         })}
       </div>
